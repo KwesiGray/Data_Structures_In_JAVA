@@ -50,25 +50,66 @@ public class FixedSizeList<E> {
          Gray[i] =e ;
          size++;
 
-         //Create a method to allow user add an element without specifying the index
-
-
-
-
-
-
-
 
 
 
 
     }
+    //Create a method to allow user add an element without specifying the index in which the element is added
+    public void add(E e){
+        int i = size;
+        add(i,e);
+    }
 
+    public  E remove(int i){
+        checkIndex(i, size);
+        E temp = Gray[i];
 
+        for(int k=i; k<size-1; k++ ){
+            Gray[k] = Gray[k+1];
 
+        }
+        Gray[size-1]= null;
+        size--;
 
+        return temp;
+    }
 
+    //Create a method to return the size of the list
+    public  int size(){
+        return size;
+    }
+    //Create a method to check if the list is empty
 
+    public boolean isEmpty(){
+        return size==0;
+    }
+    //Create a method to return an element at an index i
+    public  E get(int i) throws  IndexOutOfBoundsException{
+        checkIndex(i, size);
+        return Gray[i];
+    }
+
+    //Create a method to replace an element at an index i and return the replaced element
+    public E replace(int i , E e) throws IndexOutOfBoundsException{
+        checkIndex(i, size);
+
+        E temp = Gray[i];
+        Gray[i]= e;
+        return temp;
+
+    }
+    //Create a method that will check if the list contains an element which is being searched for!
+    public  boolean contains(Object item){
+        for(int j=0; j<size-1; j++){
+            if(get(j).equals(item)){
+                return true;
+
+            }
+
+        }
+        return false;
+    }
 
     }
 
