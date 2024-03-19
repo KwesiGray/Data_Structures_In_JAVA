@@ -37,7 +37,7 @@ public class FixedSizeList<E> {
     }
 
     //Create a method to add an element at a given index i
-    public void add(int i E e){
+    public void add(int i ,E e ){
         checkIndex(i, size+1);
         if(size == Gray.length)
             throw new IllegalStateException("List is Full");
@@ -47,7 +47,7 @@ public class FixedSizeList<E> {
              Gray[k+1] = Gray[k];
 
          }
-         Gray[i] = e;
+         Gray[i] =e ;
          size++;
 
          //Create a method to allow user add an element without specifying the index
