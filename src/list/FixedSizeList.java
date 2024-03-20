@@ -117,7 +117,6 @@ public class FixedSizeList<E> {
     }
 
     //Create a method that will return all the indexes of an element
-
     public List<Integer> indexOf(E element) {
         List<Integer> indexes = new ArrayList<>();
         for(int i=0; i<size; i++){
@@ -127,6 +126,27 @@ public class FixedSizeList<E> {
         }
         return indexes;
     }
+
+    //create a method that will print out the content of a list
+    public List printCont() {
+        System.out.println("The Content of the List is :");
+        int r;
+        for (r = 0; r < size; r++) {
+            System.out.println(Gray[r]);
+        }
+        List List = (java.util.List) Gray[r];
+        return (java.util.List) Gray[r];
+    }
+
+    public boolean clearArray() {
+        for (int i = 0; i < size; i++) {
+            Gray[i] = null;
+        }
+        size = 0;
+        return true;
+    }
+
+
 
 }
 

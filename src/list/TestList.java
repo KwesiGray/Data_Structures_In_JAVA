@@ -34,11 +34,23 @@ public class TestList {
         System.out.println("The New List Size is: "+hostelNames.size());
 
         //Checking if our contain method works
-        System.out.println(hostelNames.contains("WaterLoo"));
+        System.out.println(hostelNames.contains("WaterLoo")+(" Yes it contains WaterLoo"));
 
 
         //Create a method that will return all the indexes of an element
         System.out.println(hostelNames.indexOf("Hilda")+(" Is the index of Hilda"));
+
+
+        //create a method that will print out the content of a list
+        System.out.println(hostelNames.printCont());
+
+        System.out.println(hostelNames.clearArray()+(" Content is cleared"));
+
+
+        //Checking if it's true
+        System.out.println("Going to Return A boolean \"True\" if all the contents are cleared.");
+        System.out.println(hostelNames.isEmpty());
+        //Going to Return A boolean "True" if all the contents are cleared.
 
 
 
